@@ -36,19 +36,19 @@ class EditorWindow(QMainWindow, Ui_TextEditor):
         self.textEdit.clear()
 
     def open_file(self):
-        file_name, _ = QFileDialog.getOpenFileName(self, "Aç", "C:/Users/bugra/OneDrive/Masaüstü", "Text Files (*.txt);;All Files (*)")
+        file_name, _ = QFileDialog.getOpenFileName(self, "Aç", "C:/Users/eceso/OneDrive/Masaüstü", "Text Files (*.txt);;All Files (*)")
         if file_name:
             with open(file_name, 'r') as file:
                 self.textEdit.setPlainText(file.read())
 
     def save_file(self):
-        file_name, _ = QFileDialog.getSaveFileName(self, "Kaydet", "C:/Users/bugra/OneDrive/Masaüstü", "Text Files (*.txt);;All Files (*)")
+        file_name, _ = QFileDialog.getSaveFileName(self, "Kaydet", "C:/Users/eceso/OneDrive/Masaüstü", "Text Files (*.txt);;All Files (*)")
         if file_name:
             with open(file_name, 'w') as file:
                 file.write(self.textEdit.toPlainText())
 
     def save_as_file(self):
-        file_name, _ = QFileDialog.getSaveFileName(self, "Farklı Kaydet", "C:/Users/bugra/OneDrive/Masaüstü", "Text Files (*.txt);;All Files (*)")
+        file_name, _ = QFileDialog.getSaveFileName(self, "Farklı Kaydet", "C:/Users/eceso/OneDrive/Masaüstü", "Text Files (*.txt);;All Files (*)")
         if file_name:
             with open(file_name, 'w') as file:
                 file.write(self.textEdit.toPlainText())
